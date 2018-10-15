@@ -4,10 +4,48 @@
 
 replicaCount: 1
 
+env:
+- name: SERVER_NAME
+  value: teacher-web
+- name: ZK_HOST
+  value: zk-hotfix.wf:2181
+- name: ZK_VERSION
+  value: v1.6
+  
+
 image:
-  repository: nginx
-  tag: stable
-  pullPolicy: IfNotPresent
+  user:
+    repository: registry.xk12.cn/hotfix/user-svr
+    tag: 19
+    pullPolicy: IfNotPresent
+  solr:
+    repository: registry.xk12.cn/hotfix/solr-svr
+    tag: 4
+    pullPolicy: IfNotPresent
+  praxis:
+    repository: registry.xk12.cn/hotfix/praxis-svr
+    tag: 4
+    pullPolicy: IfNotPresent
+  lesson:
+    repository: registry.xk12.cn/hotfix/lesson-svr
+    tag: 20
+    pullPolicy: IfNotPresent
+  recommend:
+    repository: registry.xk12.cn/hotfix/recommend-svr
+    tag: TAG-2018-09-27_11-06-04
+    pullPolicy: IfNotPresent
+  encourage:
+    repository: registry.xk12.cn/hotfix/encourage-svr
+    tag: 4
+    pullPolicy: IfNotPresent
+  trail:
+    repository: registry.xk12.cn/hotfix/trail-svr
+    tag: TAG-2018-09-27_12-02-14
+    pullPolicy: IfNotPresent
+  web:
+    repository: registry.xk12.cn/hotfix/teacher-web
+    tag: TAG-2018-09-25_12-02-29
+    pullPolicy: IfNotPresent
 
 nameOverride: ""
 fullnameOverride: ""
@@ -17,13 +55,13 @@ service:
   port: 80
 
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - chart-example.local
+    - teacher-fanpeilun.xk12.cn
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
