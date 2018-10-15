@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name }}-praxis
     spec:
       containers:
-        - name: {{ .Chart.Name }}
+        - name: praxis-svr
           {{- if .Values.env }}
           env:
           {{- range .Values.env }}

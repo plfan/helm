@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name }}-user
     spec:
       containers:
-        - name: {{ .Chart.Name }}
+        - name: user-svr
           {{- if .Values.env }}
           env:
           {{- range .Values.env }}
