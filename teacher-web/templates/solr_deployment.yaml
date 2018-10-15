@@ -28,8 +28,8 @@ spec:
           - value: {{ .value }}
           {{- end }}
           {{- end }}
-          image: "{{ .Values.image.user.repository }}:{{ .Values.image.user.tag }}"
-          imagePullPolicy: {{ .Values.image.user.pullPolicy }}
+          image: "{{ .Values.image.solr.repository }}:{{ .Values.image.solr.tag }}"
+          imagePullPolicy: {{ .Values.image.solr.pullPolicy }}
           ports:
             - name: 42-tcp
               containerPort: 42
