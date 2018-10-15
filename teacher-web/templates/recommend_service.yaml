@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-recommend
+  labels:
+    app.kubernetes.io/name: {{ include "teacher-web.name" . }}
+    helm.sh/chart: {{ include "teacher-web.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}-recommend
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 42
+      targetPort: 42
+      protocol: TCP
+      name: 42-tcp
+  selector:
+    app.kubernetes.io/name: {{ include "teacher-web.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}-recommend
