@@ -23,9 +23,11 @@ spec:
         - name: {{ .Chart.Name }}
           {{- if .Values.env }}
           env:
+          - name: SERVER_NAME
+            value: {{ include "teacher-web.name" . }}
           {{- range .Values.env }}
           - name: {{ .name }}
-          - value: {{ .value }}
+            value: {{ .value }}
           {{- end }}
           {{- end }}
           image: "{{ .Values.image.web.repository }}:{{ .Values.image.web.tag }}"

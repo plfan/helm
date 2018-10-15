@@ -5,8 +5,6 @@
 replicaCount: 1
 
 env:
-- name: SERVER_NAME
-  value: teacher-web
 - name: ZK_HOST
   value: zk-hotfix.wf:2181
 - name: ZK_VERSION
