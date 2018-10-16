@@ -9,3 +9,4 @@ spec:
     requests:
       storage: 1Gi
   volumeName: {{ include "teacher-web.fullname" . }}-pv
+  storageClassName: nfs

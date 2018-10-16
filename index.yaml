@@ -3,16 +3,16 @@ entries:
   teacher-web:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-16T17:55:48.788023012+08:00
+    created: 2018-10-16T18:31:26.615986507+08:00
     description: teacher-web
-    digest: 8908e5b5fe9e732fc4175bf83a85125868ab9bd1c93b3e1998e7f96fd12c185d
+    digest: 266460e8bd7ada22eac2f5a6633174f304440b765f8070c9140d66fb22a96138
     name: teacher-web
     urls:
     - https://plfan.github.io/helm/teacher-web-0.1.0.tgz
     version: 0.1.0
   wordpress:
   - appVersion: 4.8.2
-    created: 2018-10-16T17:55:48.789022684+08:00
+    created: 2018-10-16T18:31:26.616814167+08:00
     description: Web publishing platform for building blogs and websites.
     digest: e4066e93eea058e2f7f48a04decaa5404fb4db137a6a50fdb1a02eb31f1329aa
     engine: gotpl
@@ -35,4 +35,4 @@ entries:
     urls:
     - https://plfan.github.io/helm/wordpress-0.6.13.tgz
     version: 0.6.13
-generated: 2018-10-16T17:55:48.787528358+08:00
+generated: 2018-10-16T18:31:26.614874102+08:00
