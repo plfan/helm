@@ -19,6 +19,10 @@ spec:
         app.kubernetes.io/name: {{ include "teacher-web.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      volumes:
+      - name: vol1
+        persistentVolumeClaim:
+          claimName: {{ include "teacher-web.fullname" . }}-pvc
       containers:
         - name: {{ .Chart.Name }}
           {{- if .Values.env }}
@@ -32,6 +36,13 @@ spec:
           {{- end }}
           image: "{{ .Values.image.web.repository }}:{{ .Values.image.web.tag }}"
           imagePullPolicy: {{ .Values.image.web.pullPolicy }}
+          volumeMounts:
+          - mountPath: /xdfapp/apps/tomcat/webapps/ROOT/WEB-INF/pages/vm
+            name: vol1
+            subPath: vm
+          - mountPath: /xdfapp/apps/tomcat/webapps/ROOT/resources
+            name: vol1
+            subPath: resources
           ports:
             - name: http
               containerPort: 8080
