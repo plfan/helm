@@ -30,10 +30,6 @@ spec:
           {{- end }}
           image: "{{ .Values.image.encourage.repository }}:{{ .Values.image.encourage.tag }}"
           imagePullPolicy: {{ .Values.image.encourage.pullPolicy }}
-          ports:
-            - name: 42-tcp
-              containerPort: 42
-              protocol: TCP
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

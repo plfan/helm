@@ -30,10 +30,6 @@ spec:
           {{- end }}
           image: "{{ .Values.image.praxis.repository }}:{{ .Values.image.praxis.tag }}"
           imagePullPolicy: {{ .Values.image.praxis.pullPolicy }}
-          ports:
-            - name: 42-tcp
-              containerPort: 42
-              protocol: TCP
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
