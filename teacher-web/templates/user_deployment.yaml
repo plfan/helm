@@ -25,7 +25,7 @@ spec:
           env:
           {{- range .Values.env }}
           - name: {{ .name }}
-          - value: {{ .value }}
+            value: {{ .value }}
           {{- end }}
           {{- end }}
           image: "{{ .Values.image.user.repository }}:{{ .Values.image.user.tag }}"

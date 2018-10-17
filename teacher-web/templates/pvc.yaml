@@ -4,7 +4,7 @@ metadata:
   name: {{ include "teacher-web.fullname" . }}-pvc
 spec:
   accessModes:
-  - ReadOnlyMany
+  - ReadWriteMany
   resources:
     requests:
       storage: 1Gi
