@@ -10,6 +10,12 @@ env:
 - name: ZK_VERSION
   value: v1.6
   
+recommend:
+  env:
+  - name: ZK_HOST
+    value: zk-hotfix.wf:2181
+  - name: ZK_VERSION
+    value: v1.0
 
 image:
   user:

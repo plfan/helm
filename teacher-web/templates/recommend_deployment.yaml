@@ -21,9 +21,9 @@ spec:
     spec:
       containers:
         - name: recommend-svr
-          {{- if .Values.env }}
+          {{- if .Values.recommend.env }}
           env:
-          {{- range .Values.env }}
+          {{- range .Values.recommend.env }}
           - name: {{ .name }}
             value: {{ .value }}
           {{- end }}
