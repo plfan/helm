@@ -3,9 +3,9 @@ entries:
   teacher-web:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-18T16:16:43.301679734+08:00
+    created: 2018-10-30T14:49:42.938976591+08:00
     description: teacher-web
-    digest: cfd4dd23232f1aa20620d67176fb9aaa2b9344f19a44a8118b7007ba6abdc3c3
+    digest: ee0140c06876a9e9beb991313f1360b104d4fce521cdb0b923880d63d1d83acd
     icon: https://static.okjiaoyu.cn/components/common/theme/teacher/img/logo_77961f6.png
     name: teacher-web
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.0
   wordpress:
   - appVersion: 4.8.2
-    created: 2018-10-18T16:16:43.303153872+08:00
+    created: 2018-10-30T14:49:42.940340489+08:00
     description: Web publishing platform for building blogs and websites.
     digest: e4066e93eea058e2f7f48a04decaa5404fb4db137a6a50fdb1a02eb31f1329aa
     engine: gotpl
@@ -36,4 +36,4 @@ entries:
     urls:
     - https://plfan.github.io/helm/wordpress-0.6.13.tgz
     version: 0.6.13
-generated: 2018-10-18T16:16:43.299983076+08:00
+generated: 2018-10-30T14:49:42.937886398+08:00
