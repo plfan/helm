@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "teacher-web.fullname" . }}-conf
+data:
+  ZK_HOST: zk-hotfix.wf:2181
+  ZK_VERSION: v1.6

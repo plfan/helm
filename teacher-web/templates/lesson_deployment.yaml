@@ -21,13 +21,9 @@ spec:
     spec:
       containers:
         - name: lesson-svr
-          {{- if .Values.env }}
-          env:
-          {{- range .Values.env }}
-          - name: {{ .name }}
-            value: {{ .value }}
-          {{- end }}
-          {{- end }}
+          envFrom:
+          - configMapRef:
+              name: {{ include "teacher-web.fullname" . }}-conf
           image: "{{ .Values.image.lesson.repository }}:{{ .Values.image.lesson.tag }}"
           imagePullPolicy: {{ .Values.image.lesson.pullPolicy }}
           resources:

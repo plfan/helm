@@ -21,13 +21,9 @@ spec:
     spec:
       containers:
         - name: trail-svr
-          {{- if .Values.env }}
-          env:
-          {{- range .Values.env }}
-          - name: {{ .name }}
-            value: {{ .value }}
-          {{- end }}
-          {{- end }}
+          envFrom:
+          - configMapRef:
+              name: {{ include "teacher-web.fullname" . }}-conf
           image: "{{ .Values.image.trail.repository }}:{{ .Values.image.trail.tag }}"
           imagePullPolicy: {{ .Values.image.trail.pullPolicy }}
           resources:

@@ -25,15 +25,12 @@ spec:
           claimName: {{ include "teacher-web.fullname" . }}-pvc
       containers:
         - name: {{ .Chart.Name }}
-          {{- if .Values.env }}
           env:
           - name: SERVER_NAME
             value: {{ include "teacher-web.name" . }}
-          {{- range .Values.env }}
-          - name: {{ .name }}
-            value: {{ .value }}
-          {{- end }}
-          {{- end }}
+          envFrom:
+          - configMapRef:
+              name: {{ include "teacher-web.fullname" . }}-conf
           image: "{{ .Values.image.web.repository }}:{{ .Values.image.web.tag }}"
           imagePullPolicy: {{ .Values.image.web.pullPolicy }}
           volumeMounts:

@@ -21,13 +21,9 @@ spec:
     spec:
       containers:
         - name: encourage-svr
-          {{- if .Values.env }}
-          env:
-          {{- range .Values.env }}
-          - name: {{ .name }}
-            value: {{ .value }}
-          {{- end }}
-          {{- end }}
+          envFrom:
+          - configMapRef:
+              name: {{ include "teacher-web.fullname" . }}-conf
           image: "{{ .Values.image.encourage.repository }}:{{ .Values.image.encourage.tag }}"
           imagePullPolicy: {{ .Values.image.encourage.pullPolicy }}
           resources:
