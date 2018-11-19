@@ -1,6 +1,6 @@
 apiVersion: v1
 appVersion: "1.0"
 description: Okay 教师空间
-name: 教师空间
+name: teacher-web
 version: 0.1.0
 icon: https://plfan.github.io/helm/images/teacher-web.png
