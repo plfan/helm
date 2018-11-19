@@ -1,6 +1,6 @@
 apiVersion: v1
 appVersion: "1.0"
-description: teacher-web
-name: teacher-web
+description: Okay 教师空间
+name: 教师空间
 version: 0.1.0
-icon: https://static.okjiaoyu.cn/components/common/theme/teacher/img/logo_77961f6.png
+icon: https://github.com/plfan/helm/images/teacher-web.png

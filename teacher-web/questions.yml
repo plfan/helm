@@ -2,9 +2,9 @@ categories:
 - Okay
 questions:
     - default: "TAG-2018-09-25_12-02-29"
-      description: "teacher image tag"
-      group: "teacher config"
-      label: "image tag"
+      description: "服务teacher-web image tag"
+      group: "镜像配置"
+      label: "teacher-web"
       options:
       - "TAG-2018-09-25_11-04-19"
       - "TAG-2018-09-25_12-02-29"
@@ -12,3 +12,113 @@ questions:
       require: true
       type: enum
       variable: image.web.tag
+    - default: "19"
+      description: "服务user-svr image tag"
+      group: "镜像配置"
+      label: "user-svr"
+      options:
+      - "5"
+      - "6"
+      - "8"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      require: true
+      type: enum
+      variable: image.user.tag
+    - default: "4"
+      description: "服务solr-svr image tag"
+      group: "镜像配置"
+      label: "solr-svr"
+      options:
+      - "3"
+      - "4"
+      require: true
+      type: enum
+      variable: image.solr.tag
+    - default: "4"
+      description: "服务praxis-svr image tag"
+      group: "镜像配置"
+      label: "praxis-svr"
+      options:
+      - "2"
+      - "3"
+      - "4"
+      require: true
+      type: enum
+      variable: image.praxis.tag
+    - default: "20"
+      description: "服务lesson-svr image tag"
+      group: "镜像配置"
+      label: "lesson-svr"
+      options:
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      require: true
+      type: enum
+      variable: image.lesson.tag
+    - default: "TAG-2018-09-27_11-06-04"
+      description: "服务recommend-svr image tag"
+      group: "镜像配置"
+      label: "recommend-svr"
+      options:
+      - "1"
+      - "2"
+      - "4"
+      - "5"
+      - "TAG-2018-09-27_11-01-27"
+      - "TAG-2018-09-27_11-06-04"
+      require: true
+      type: enum
+      variable: image.recommend.tag
+    - default: "4"
+      description: "服务encourage-svr image tag"
+      group: "镜像配置"
+      label: "encourage-svr"
+      options:
+      - "3"
+      - "4"
+      require: true
+      type: enum
+      variable: image.encourage.tag
+    - default: "TAG-2018-09-27_12-02-14"
+      description: "服务trail-svr image tag"
+      group: "镜像配置"
+      label: "trail-svr"
+      options:
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "TAG-2018-09-27_12-02-14"
+      require: true
+      type: enum
+      variable: image.trail.tag
+    - description: "zk host"
+      default: "zk-hotfix.wf:2181"
+      group: "环境配置"
+      label: "ZK_HOST"
+      require: true
+      type: string
+      variable: recommend.env[0].value
+    - description: "zk version"
+      default: "v1.0"
+      group: "环境配置"
+      label: "ZK_VERSION"
+      require: true
+      type: string
+      variable: recommend.env[1].value
