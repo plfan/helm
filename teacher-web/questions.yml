@@ -1,0 +1,14 @@
+categories:
+- Okay
+questions:
+    - default: "TAG-2018-09-25_12-02-29"
+      description: "teacher image tag"
+      group: "teacher config"
+      label: "image tag"
+      options:
+      - "TAG-2018-09-25_11-04-19"
+      - "TAG-2018-09-25_12-02-29"
+      - "TAG-2018-11-17_11-30-10"
+      require: true
+      type: enum
+      variable: image.web.tag
