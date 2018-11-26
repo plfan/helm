@@ -3,9 +3,9 @@ entries:
   teacher-web:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-19T02:22:39.364798853-05:00
+    created: 2018-11-26T16:27:58.092630939Z
     description: Okay 教师空间
-    digest: ff48a05efdcf8102132b8da8ca6258e4196876543bc798fde7611d74929d834e
+    digest: 61f6d58ccfefa4c276399b928563696642ce9a859392a0f77d5e38deb7e59d0b
     icon: https://plfan.github.io/helm/images/teacher-web.png
     name: teacher-web
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.0
   wordpress:
   - appVersion: 4.8.2
-    created: 2018-11-19T02:22:39.378246975-05:00
+    created: 2018-11-26T16:27:58.094176081Z
     description: Web publishing platform for building blogs and websites.
     digest: e4066e93eea058e2f7f48a04decaa5404fb4db137a6a50fdb1a02eb31f1329aa
     engine: gotpl
@@ -36,4 +36,4 @@ entries:
     urls:
     - https://plfan.github.io/helm/wordpress-0.6.13.tgz
     version: 0.6.13
-generated: 2018-11-19T02:22:39.363096671-05:00
+generated: 2018-11-26T16:27:58.091787478Z
